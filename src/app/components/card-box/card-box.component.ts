@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountDataModel } from 'src/app/model/AccountDataModel';
-import { CardsService } from 'src/app/services/cards.service';
+import { AccountsService } from 'src/app/services/accounts.service';
+
 
 @Component({
   selector: 'app-card-box',
@@ -21,7 +22,7 @@ export class CardBoxComponent implements OnInit {
     }
   };
 
-  constructor(private service: CardsService){
+  constructor(private service: AccountsService){
 
   }
 
@@ -30,7 +31,7 @@ export class CardBoxComponent implements OnInit {
   }
 
   getAccountData(){
-    this.service.getCard().subscribe(data =>{
+    this.service.getAccount().subscribe(data =>{
       this.accountData.name = data.name;
       this.accountData.account.agency = data.account.agency;
       this.accountData.card.limit = data.card.limit;
