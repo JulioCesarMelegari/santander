@@ -10,6 +10,7 @@ import { CarouselItemsComponent } from './components/carousel-items/carousel-ite
 import { AmountBoxComponent } from './components/amount-box/amount-box.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SvgComponentsModule } from './svg-components/svg-components.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SvgComponentsModule } from './svg-components/svg-components.module';
     AppRoutingModule,
     NgbModule,
 		SvgComponentsModule,
+    HttpClientModule
 
   ],
   providers: [],
